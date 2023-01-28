@@ -1,0 +1,7 @@
+.mgn {
+  &-card {
+    background: #fff;
+    box-shadow: var(--mgn-shadow-level-1-muted);
+    border-radius: 8px;
+  }
+}

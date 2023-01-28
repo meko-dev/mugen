@@ -1,0 +1,83 @@
+:host {
+  --mgn_input-border-radius: 4px;
+  --mgn_input-box-shadow: var(--mgn-shadow-level-1-highlight);
+  --mgn_input-box-shadow-error: var(--mgn-shadow-level-1-error);
+  --mgn_input-color: rgb(--mgn-color-muted-active);
+  --mgn_input-color-border: rgb(var(--mgn-color-muted));
+  --mgn_input-color-border-highlight: rgb(var(--mgn-color-highlight));
+  --mgn_input-color-border-error: rgb(var(--mgn-color-error));
+  --mgn_input-color-border-success: rgb(var(--mgn-color-success));
+  --mgn_input-color-border-warning: rgb(var(--mgn-color-warning));
+  --mgn_input-color-background: rgb(var(--mgn-color-background-muted));
+  --mgn_input-font-size: 14px;
+  --mgn_input-height: 36px;
+  --mgn_input-padding: 0 8px;
+}
+
+:host {
+  display: flex;
+  width: 100%;
+}
+
+.mgn-input {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid var(--mgn_input-color-border);
+  border-radius: var(--mgn_input-border-radius);
+  box-sizing: border-box;
+  color: var(--mgn_input-color);
+  display: block;
+  flex: 1 1 auto;
+  font-size: var(--mgn_input-font-size);
+  font-weight: 400;
+  height: var(--mgn_input-height);
+  line-height: 1.53;
+  padding: var(--mgn_input-padding);
+
+  &:focus {
+    outline: 0;
+
+    &:where(:not(.mgn-input--error)) {
+      background-color: #fff;
+      border-color: var(--mgn_input-color-border-highlight);
+      box-shadow: var(--mgn_input-box-shadow);
+    }
+  }
+
+  &--readonly,
+  &--readonly:focus {
+    background-color: var(--mgn_input-color-background);
+  }
+
+  &--disabled,
+  &--disabled:focus {
+    background-color: var(--mgn_input-color-background);
+    cursor: not-allowed;
+    opacity: .65;
+  }
+
+  &--error {
+    background-color: rgba(var(--mgn-color-error), .1);
+    border-color: var(--mgn_input-color-border-error);
+    color: rgb(var(--mgn-color-error));
+
+    &:focus {
+      background-color: #fff;
+      box-shadow: var(--mgn_input-box-shadow-error);
+    }
+  }
+
+  &::placeholder {
+    color: #b4bdc6;
+    font-style: italic;
+    transition: transform .1s;
+
+    :where(.mgn-input:focus)& {
+      transform: translateX(4px);
+    }
+
+    :where(.mgn-input--error)& {
+      color: rgba(var(--mgn-color-error), .6);
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "mugen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/mugen.modules.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:webcomponent": "node index.js",
+    "build:webcomponent": "node index.js",
+    "start:webcomponent:browser": "cross-env WORKFLOW=browser WATCH=true node index.js",
+    "build:webcomponent:browser": "cross-env WORKFLOW=browser node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meko-dev/mugen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meko-dev/mugen/issues"
+  },
+  "homepage": "https://github.com/meko-dev/mugen#readme",
+  "devDependencies": {
+    "autoprefixer": "10.4.13",
+    "cross-env": "7.0.3",
+    "esbuild": "0.17.4",
+    "postcss": "8.4.21",
+    "postcss-import": "15.1.0",
+    "postcss-nested": "6.0.0"
+  },
+  "dependencies": {
+    "uhtml": "3.1.0"
+  }
+}
