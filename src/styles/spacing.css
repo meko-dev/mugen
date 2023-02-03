@@ -1,0 +1,20 @@
+.mgn-u-margin {
+  margin: 16px;
+
+  &--s { margin: 8px; }
+  &--l { margin: 24px; }
+  &--xl { margin: 32px; }
+}
+
+.mgn-u-margin-n {
+  &--top-left-s { margin: -8px; margin-right: 0; }
+  &--top-right-s { margin: -8px; margin-left: 0; }
+}
+
+.mgn-u-padding {
+  padding: 16px;
+
+  &--s { padding: 8px; }
+  &--l { padding: 24px; }
+  &--xl { padding: 32px; }
+}

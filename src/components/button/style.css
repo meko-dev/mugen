@@ -1,16 +1,22 @@
 :host {
-  --mgn_button-border-radius: 4px;
+  --mgn_button-border-radius: var(--mgn-radius);
   --mgn_button-box-shadow: var(--mgn-shadow-level-1-highlight);
   --mgn_button-box-shadow-muted: var(--mgn-shadow-level-1-muted);
+  --mgn_button-color-accent: rgb(var(--mgn-color-highlight));
   --mgn_button-color-background: rgb(var(--mgn-color-background-highlight));
   --mgn_button-color-background-hover: rgb(var(--mgn-color-background-highlight-hover));
   --mgn_button-color-background-active: rgb(var(--mgn-color-background-highlight-active));
+  --mgn_button-color-background-accent: rgb(var(--mgn-color-background-accent));
+  --mgn_button-color-background-accent-hover: rgb(var(--mgn-color-background-accent-hover));
+  --mgn_button-color-background-accent-active: rgb(var(--mgn-color-background-accent-active));
   --mgn_button-color-background-muted: rgb(var(--mgn-color-background-muted));
   --mgn_button-color-background-muted-hover: rgb(var(--mgn-color-background-muted-hover));
   --mgn_button-color-background-muted-active: rgb(var(--mgn-color-background-muted-active));
   --mgn_button-font-size: 14px;
+  --mgn_button-font-size-small: 12px;
   --mgn_button-gap: 4px;
-  --mgn_button-height: 36px;
+  --mgn_button-height: 40px;
+  --mgn_button-height-small: 32px;
   --mgn_button-padding: 0 8px;
 }
 
@@ -37,6 +43,7 @@
   display: inline-flex;
   font-family: var(--mgn-font-family, sans-serif);
   font-size: var(--mgn_button-font-size);
+  font-weight: bold;
   gap: var(--mgn_button-gap);
   height: var(--mgn_button-height);
   justify-content: center;
@@ -55,6 +62,23 @@
   &:active:where(:not(.mgn-button--disabled)) {
     background-color: var(--mgn_button-color-background-active);
     transform: translateY(0);
+  }
+
+  &--accent {
+    background-color: var(--mgn_button-color-background-accent);
+    box-shadow: none;
+    color: var(--mgn_button-color-accent);
+
+    &:hover:where(:not(.mgn-button--disabled)) {
+      background-color: var(--mgn_button-color-background-accent-hover);
+      color: #fff;
+      box-shadow: var(--mgn_button-box-shadow);
+    }
+
+    &:active:where(:not(.mgn-button--disabled)) {
+      background-color: var(--mgn_button-color-background-accent-active);
+      transform: translateY(0);
+    }
   }
 
   &--muted {
@@ -110,5 +134,10 @@
 
   &--fluid {
     flex: 1 1 auto;
+  }
+
+  &--small {
+    font-size: var(--mgn_button-font-size-small);
+    height: var(--mgn_button-height-small);
   }
 }

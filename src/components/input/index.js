@@ -55,8 +55,36 @@ export default class Component extends HTMLElement {
       { 'mgn-input--warning': this.#state.type === 'warning' }
     );
 
+    const labelClasses = classNames('mgn-input__label',
+      { 'mgn-input__label--visible': this.#state.labelVisible },
+      { 'mgn-input__label--error': this.#state.type === 'error' }
+    );
+
+    const detailsClasses = classNames('mgn-input__details',
+      { 'mgn-input__details--visible': this.#state.detailsVisible },
+      { 'mgn-input__details--error': this.#state.type === 'error' }
+    );
+
     render(this.#shadowRoot, html`
+      <div class="${labelClasses}">
+        <slot name="label" onslotchange=${this.#onLabelSlotChange.bind(this)}></slot>
+      </div>
+
       <input type="text" part="input" value="${this.#state.value}" placeholder="${this.#state.placeholder}" ?disabled="${this.#state.disabled}" ?readonly="${this.#state.readonly}" class="${classes}">
+    
+      <div class="${detailsClasses}">
+        <slot name="details" onslotchange=${this.#onDetailsSlotChange.bind(this)}></slot>
+      </div>
     `);
+  }
+
+  #onLabelSlotChange(event) {
+    this.#state.labelVisible = !!event.target.assignedNodes().length;
+    this.render();
+  }
+
+  #onDetailsSlotChange(event) {
+    this.#state.detailsVisible = !!event.target.assignedNodes().length;
+    this.render();
   }
 }

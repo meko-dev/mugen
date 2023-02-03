@@ -1,0 +1,34 @@
+:root {
+  --mgn-color-highlight: 105, 108, 255;
+  --mgn-color-muted: 133, 146, 163;
+  --mgn-color-error: 255, 62, 29;
+  --mgn-color-success: 113, 221, 55;
+  --mgn-color-warning: 255, 171, 0;
+  --mgn-color-background-highlight: var(--mgn-color-highlight);
+  --mgn-color-background-highlight-hover: 64, 86, 228;
+  --mgn-color-background-highlight-active: 49, 71, 213;
+  --mgn-color-background-inverted: 255, 255, 255;
+  --mgn-color-background-accent: 231, 231, 255;
+  --mgn-color-background-accent-hover: var(--mgn-color-background-highlight-hover);
+  --mgn-color-background-accent-active: var(--mgn-color-background-highlight-active);
+  --mgn-color-background-muted: 235, 238, 240;
+  --mgn-color-background-muted-hover: 120, 131, 147;
+  --mgn-color-background-muted-active: 101, 110, 124;
+
+  --mgn-color-highlight-shadow: rgba(var(--mgn-color-highlight), .4);
+  --mgn-color-muted-shadow: rgba(var(--mgn-color-muted), .4);
+  --mgn-color-error-shadow: rgba(var(--mgn-color-error), .4);
+  --mgn-color-success-shadow: rgba(var(--mgn-color-success), .4);
+  --mgn-color-warning-shadow: rgba(var(--mgn-color-warning), .4);
+
+  --mgn-shadow-level-1: 0 2px 10px 0;
+  --mgn-shadow-level-1-highlight: var(--mgn-shadow-level-1) var(--mgn-color-highlight-shadow);
+  --mgn-shadow-level-1-muted: var(--mgn-shadow-level-1) var(--mgn-color-muted-shadow);
+  --mgn-shadow-level-1-error: var(--mgn-shadow-level-1) var(--mgn-color-error-shadow);
+  --mgn-shadow-level-1-success: var(--mgn-shadow-level-1) var(--mgn-color-success-shadow);
+  --mgn-shadow-level-1-warning: var(--mgn-shadow-level-1) var(--mgn-color-warning-shadow);
+
+  --mgn-radius: 6px;
+  --mgn-radius-m: 8px;
+  --mgn-radius-l: 16px;
+}

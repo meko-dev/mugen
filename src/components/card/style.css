@@ -1,0 +1,59 @@
+:host {
+  --mgn_card-color-background: #fff;
+  --mgn_card-color-background-highlight: rgb(var(--mgn-color-background-highlight));
+  --mgn_card-radius: var(--mgn-radius);
+}
+
+.mgn-card {
+  background: #fff;
+  box-shadow: var(--mgn-shadow-level-1-muted);
+  border-radius: var(--mgn_card-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 0;
+
+  &--highlight {
+    background: var(--mgn_card-color-background-highlight);
+    box-shadow: var(--mgn-shadow-level-1-highlight);
+    color: #fff;
+  }
+
+  &__title {
+    align-items: flex-start;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+
+  ::slotted(mgn-card-title) {
+    flex: 1 1 auto;
+  }
+
+  ::slotted(mgn-card-content) {
+    flex: 1 1 auto;
+    padding: 0 16px;
+  }
+
+  ::slotted(mgn-card-content[expanded]) {
+    flex: 1 1 auto;
+    padding: 0;
+  }
+
+  &__actions {
+    margin-right: -8px;
+    margin-top: -8px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 16px;
+  }
+
+  ::slotted(mgn-card-footer) {
+    flex: 1 1 auto;
+  }
+}

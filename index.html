@@ -21,32 +21,42 @@
 </head>
 <body style="padding-bottom: 600px">
   <h1>Icon</h1>
-  <mgn-icon src="http://localhost:8000/icons/paperclip.svg"></mgn-icon>
-  <mgn-icon src="http://localhost:8000/icons/paperclip.svg" size="small"></mgn-icon>
+  <mgn-icon src="/assets/thumbs-up.svg"></mgn-icon>
+  <mgn-icon src="/assets/thumbs-up.svg" size="small"></mgn-icon>
 
   <h1>Button</h1>
   <div style="display: flex; gap: 8px; flex-direction: column;">
-    <h3>Default</h3>
+    <h3>Highlight (default)</h3>
     <div style="display: flex; gap: 8px;">
       <mgn-button>Button</mgn-button>
-      <mgn-button><mgn-icon src="http://localhost:8000/icons/paperclip.svg" size="small"></mgn-icon>Button with Icon</mgn-button>
-      <mgn-button>Button with Icon<mgn-icon src="http://localhost:8000/icons/paperclip.svg" size="small"></mgn-icon></mgn-button>
+      <mgn-button><mgn-icon src="/assets/thumbs-up.svg" size="small"></mgn-icon>Button with Icon</mgn-button>
+      <mgn-button>Button with Icon<mgn-icon src="/assets/thumbs-up.svg" size="small"></mgn-icon></mgn-button>
       <mgn-button disabled>Disabled Button</mgn-button>
+      <mgn-button size="small">Small Button</mgn-button>
       <mgn-button fluid>Fluid Button</mgn-button>
+    </div>
+    <h3>Accent</h3>
+    <div style="display: flex; gap: 8px;">
+      <mgn-button variant="accent">Button</mgn-button>
+      <mgn-button variant="accent"><mgn-icon src="/assets/thumbs-up.svg" size="small"></mgn-icon>Button with Icon</mgn-button>
+      <mgn-button variant="accent">Button with Icon<mgn-icon src="/assets/thumbs-up.svg" size="small"></mgn-icon></mgn-button>
+      <mgn-button variant="accent" disabled>Disabled Button</mgn-button>
+      <mgn-button variant="accent" size="small">Small Button</mgn-button>
+      <mgn-button variant="accent" fluid>Fluid Button</mgn-button>
     </div>
     <h3>Muted</h3>
     <div style="display: flex; gap: 8px;">
       <mgn-button variant="muted">Button</mgn-button>
-      <mgn-button variant="muted"><mgn-icon src="http://localhost:8000/icons/paperclip.svg" size="small"></mgn-icon>Button with Icon</mgn-button>
-      <mgn-button variant="muted">Button with Icon<mgn-icon src="http://localhost:8000/icons/paperclip.svg" size="small"></mgn-icon></mgn-button>
+      <mgn-button variant="muted"><mgn-icon src="/assets/thumbs-up.svg" size="small"></mgn-icon>Button with Icon</mgn-button>
+      <mgn-button variant="muted">Button with Icon<mgn-icon src="/assets/thumbs-up.svg" size="small"></mgn-icon></mgn-button>
       <mgn-button variant="muted" disabled>Disabled Button</mgn-button>
       <mgn-button variant="muted" fluid>Fluid Button</mgn-button>
     </div>
     <h3>Ghost</h3>
     <div style="display: flex; gap: 8px;">
       <mgn-button variant="ghost">Button</mgn-button>
-      <mgn-button variant="ghost"><mgn-icon src="http://localhost:8000/icons/paperclip.svg" size="small"></mgn-icon>Button with Icon</mgn-button>
-      <mgn-button variant="ghost">Button with Icon<mgn-icon src="http://localhost:8000/icons/paperclip.svg" size="small"></mgn-icon></mgn-button>
+      <mgn-button variant="ghost"><mgn-icon src="/assets/thumbs-up.svg" size="small"></mgn-icon>Button with Icon</mgn-button>
+      <mgn-button variant="ghost">Button with Icon<mgn-icon src="/assets/thumbs-up.svg" size="small"></mgn-icon></mgn-button>
       <mgn-button variant="ghost" disabled>Disabled Button</mgn-button>
       <mgn-button variant="ghost" fluid>Fluid Button</mgn-button>
     </div>
@@ -56,19 +66,30 @@
   <div style="display: flex; gap: 8px; flex-direction: column;">
     <h3>Default</h3>
     <div style="display: flex; width: 400px; gap: 8px; flex-wrap: wrap;">
-      <mgn-input></mgn-input>
-      <mgn-input placeholder="Placeholder"></mgn-input>
-      <mgn-input name="sample-input1" value="Lorem Ipsum" disabled></mgn-input>
-      <mgn-input name="sample-input2" value="Lorem Ipsum" readonly></mgn-input>
-      <mgn-input placeholder="Placeholder" type="error"></mgn-input>
+      <mgn-input class="mgn-u-margin"></mgn-input>
+      <mgn-input class="mgn-u-margin" placeholder="Placeholder">
+        <span slot="label">Label</span>
+        <span slot="details">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
+      </mgn-input>
+      <mgn-input class="mgn-u-margin" name="sample-input1" value="Lorem Ipsum" disabled></mgn-input>
+      <mgn-input class="mgn-u-margin" name="sample-input2" value="Lorem Ipsum" readonly></mgn-input>
+      <mgn-input class="mgn-u-margin" placeholder="Placeholder" type="error">
+        <span slot="label">Label</span>
+        <span slot="details">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
+      </mgn-input>
     </div>
   </div>
 
   <h1>Card</h1>
   <div style="display: flex; width: 400px; gap: 8px; flex-wrap: wrap;">
-    <div class="mgn-card">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum assumenda, dolorem ipsa ex adipisci laborum, omnis nobis doloremque, fuga a distinctio. Fugit tenetur facere ipsum odio, ut unde provident cumque.
-    </div>
+    <mgn-card>
+      <mgn-card-title slot="title">Default card</mgn-card-title>
+      <mgn-card-actions slot="actions"><mgn-button variant="ghost"><mgn-icon src="/assets/dots-horizontal.svg"></mgn-icon></mgn-button></mgn-card-actions>
+      <mgn-card-content slot="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum assumenda, dolorem ipsa ex adipisci laborum, omnis nobis doloremque, fuga a distinctio. Fugit tenetur facere ipsum odio, ut unde provident cumque.</mgn-card-content>
+      <mgn-card-footer slot="footer">
+        <mgn-button fluid>Button</mgn-button>
+      </mgn-card-footer>
+    </mgn-card>
   </div>
 </body>
 </html>

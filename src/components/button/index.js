@@ -21,7 +21,7 @@ export default class Component extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['type', 'variant', 'disabled', 'fluid'];
+    return ['type', 'variant', 'disabled', 'fluid', 'size'];
   }
 
   async attributeChangedCallback(name, oldValue, value) {
@@ -35,6 +35,8 @@ export default class Component extends HTMLElement {
       this.#state.disabled = (value === '' || value !== 'false') && value !== null;
     } else if (name === 'fluid') {
       this.#state.fluid = (value === '' || value !== 'false') && value !== null;
+    } else if (name === 'size') {
+      this.#state.size = value;
     }
 
     this.render();
@@ -42,27 +44,26 @@ export default class Component extends HTMLElement {
   
   render() {
     const classes = classNames('mgn-button',
+      { 'mgn-button--accent': this.#state.variant === 'accent' },
       { 'mgn-button--muted': this.#state.variant === 'muted' },
       { 'mgn-button--ghost': this.#state.variant === 'ghost' },
       { 'mgn-button--disabled': this.#state.disabled },
-      { 'mgn-button--fluid': this.#state.fluid }
+      { 'mgn-button--fluid': this.#state.fluid },
+      { 'mgn-button--small': this.#state.size === 'small' }
     );
 
     render(this.#shadowRoot, html`
-      <button part="input" type="${this.#state.type}" ?disabled="${this.#state.disabled}" class="${classes}" onclick="${this.#onClick.bind(this)}"><slot></slot></button>
+      <button part="input" type="${this.#state.type || 'button'}" ?disabled="${this.#state.disabled}" class="${classes}" onclick="${this.#onClick.bind(this)}"><slot></slot></button>
     `);
   }
 
   #onClick(event) {
-    this.dispatchEvent(new MouseEvent('click'));
-    
-    if (this.#state.type === 'submit') {
-      const form = this.closest('form');
+    if (this.#state.type !== 'submit') { return; }
 
-      if (form) {
-        event.preventDefault();
-        form.submit();
-      }
-    }
+    const form = this.closest('form');
+    if (!form) { return; }
+
+    event.preventDefault();
+    form.submit();
   }
 }

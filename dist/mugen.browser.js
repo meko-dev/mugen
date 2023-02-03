@@ -29,7 +29,7 @@
   };
 
   // src/styles/main.css
-  var main_default = ".mgn-card{background:#fff;box-shadow:var(--mgn-shadow-level-1-muted);border-radius:8px}:root{--mgn-color-highlight: 105, 108, 255;--mgn-color-muted: 133, 146, 163;--mgn-color-error: 255, 62, 29;--mgn-color-success: 113, 221, 55;--mgn-color-warning: 255, 171, 0;--mgn-color-background-highlight: var(--mgn-color-highlight);--mgn-color-background-highlight-hover: 64, 86, 228;--mgn-color-background-highlight-active: 49, 71, 213;--mgn-color-background-muted: 235, 238, 240;--mgn-color-background-muted-hover: 120, 131, 147;--mgn-color-background-muted-active: 101, 110, 124;--mgn-color-highlight-shadow: rgba(var(--mgn-color-highlight), .4);--mgn-color-muted-shadow: rgba(var(--mgn-color-muted), .4);--mgn-color-error-shadow: rgba(var(--mgn-color-error), .4);--mgn-color-success-shadow: rgba(var(--mgn-color-success), .4);--mgn-color-warning-shadow: rgba(var(--mgn-color-warning), .4);--mgn-shadow-level-1: 0 .125rem .25rem 0;--mgn-shadow-level-1-highlight: var(--mgn-shadow-level-1) var(--mgn-color-highlight-shadow);--mgn-shadow-level-1-muted: var(--mgn-shadow-level-1) var(--mgn-color-muted-shadow);--mgn-shadow-level-1-error: var(--mgn-shadow-level-1) var(--mgn-color-error-shadow);--mgn-shadow-level-1-success: var(--mgn-shadow-level-1) var(--mgn-color-success-shadow);--mgn-shadow-level-1-warning: var(--mgn-shadow-level-1) var(--mgn-color-warning-shadow)}html{background-color:#f5f5f9}\n";
+  var main_default = ":root{--mgn-color-highlight: 105, 108, 255;--mgn-color-muted: 133, 146, 163;--mgn-color-error: 255, 62, 29;--mgn-color-success: 113, 221, 55;--mgn-color-warning: 255, 171, 0;--mgn-color-background-highlight: var(--mgn-color-highlight);--mgn-color-background-highlight-hover: 64, 86, 228;--mgn-color-background-highlight-active: 49, 71, 213;--mgn-color-background-inverted: 255, 255, 255;--mgn-color-background-accent: 231, 231, 255;--mgn-color-background-accent-hover: var(--mgn-color-background-highlight-hover);--mgn-color-background-accent-active: var(--mgn-color-background-highlight-active);--mgn-color-background-muted: 235, 238, 240;--mgn-color-background-muted-hover: 120, 131, 147;--mgn-color-background-muted-active: 101, 110, 124;--mgn-color-highlight-shadow: rgba(var(--mgn-color-highlight), .4);--mgn-color-muted-shadow: rgba(var(--mgn-color-muted), .4);--mgn-color-error-shadow: rgba(var(--mgn-color-error), .4);--mgn-color-success-shadow: rgba(var(--mgn-color-success), .4);--mgn-color-warning-shadow: rgba(var(--mgn-color-warning), .4);--mgn-shadow-level-1: 0 2px 10px 0;--mgn-shadow-level-1-highlight: var(--mgn-shadow-level-1) var(--mgn-color-highlight-shadow);--mgn-shadow-level-1-muted: var(--mgn-shadow-level-1) var(--mgn-color-muted-shadow);--mgn-shadow-level-1-error: var(--mgn-shadow-level-1) var(--mgn-color-error-shadow);--mgn-shadow-level-1-success: var(--mgn-shadow-level-1) var(--mgn-color-success-shadow);--mgn-shadow-level-1-warning: var(--mgn-shadow-level-1) var(--mgn-color-warning-shadow);--mgn-radius: 6px;--mgn-radius-m: 8px;--mgn-radius-l: 16px}.mgn-u-margin{margin:16px}.mgn-u-margin--s{margin:8px}.mgn-u-margin--l{margin:24px}.mgn-u-margin--xl{margin:32px}.mgn-u-margin-n--top-left-s{margin:-8px 0 -8px -8px}.mgn-u-margin-n--top-right-s{margin:-8px -8px -8px 0}.mgn-u-padding{padding:16px}.mgn-u-padding--s{padding:8px}.mgn-u-padding--l{padding:24px}.mgn-u-padding--xl{padding:32px}html{background-color:#f4f5fa}\n";
 
   // src/components/icon/style.css
   var style_default = ':host{align-items:center;display:inline-flex;justify-content:center;min-height:24px;min-width:24px;font-size:var(--font-size, 16px)}:host(:where([size="small"])){min-height:16px;min-width:16px}svg{vertical-align:top}\n';
@@ -692,15 +692,17 @@
   };
 
   // src/components/input/style.css
-  var style_default2 = ":host{--mgn_input-border-radius: 4px;--mgn_input-box-shadow: var(--mgn-shadow-level-1-highlight);--mgn_input-box-shadow-error: var(--mgn-shadow-level-1-error);--mgn_input-color: rgb(--mgn-color-muted-active);--mgn_input-color-border: rgb(var(--mgn-color-muted));--mgn_input-color-border-highlight: rgb(var(--mgn-color-highlight));--mgn_input-color-border-error: rgb(var(--mgn-color-error));--mgn_input-color-border-success: rgb(var(--mgn-color-success));--mgn_input-color-border-warning: rgb(var(--mgn-color-warning));--mgn_input-color-background: rgb(var(--mgn-color-background-muted));--mgn_input-font-size: 14px;--mgn_input-height: 36px;--mgn_input-padding: 0 8px}:host{display:flex;width:100%}.mgn-input{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:#fff;border:1px solid var(--mgn_input-color-border);border-radius:var(--mgn_input-border-radius);box-sizing:border-box;color:var(--mgn_input-color);display:block;flex:1 1 auto;font-size:var(--mgn_input-font-size);font-weight:400;height:var(--mgn_input-height);line-height:1.53;padding:var(--mgn_input-padding)}.mgn-input:focus{outline:0}.mgn-input:focus:where(:not(.mgn-input--error)){background-color:#fff;border-color:var(--mgn_input-color-border-highlight);box-shadow:var(--mgn_input-box-shadow)}.mgn-input--readonly,.mgn-input--readonly:focus{background-color:var(--mgn_input-color-background)}.mgn-input--disabled,.mgn-input--disabled:focus{background-color:var(--mgn_input-color-background);cursor:not-allowed;opacity:.65}.mgn-input--error{background-color:rgba(var(--mgn-color-error),.1);border-color:var(--mgn_input-color-border-error);color:rgb(var(--mgn-color-error))}.mgn-input--error:focus{background-color:#fff;box-shadow:var(--mgn_input-box-shadow-error)}.mgn-input::-moz-placeholder{color:#b4bdc6;font-style:italic;-moz-transition:transform .1s;transition:transform .1s}.mgn-input::placeholder{color:#b4bdc6;font-style:italic;transition:transform .1s}:where(.mgn-input:focus).mgn-input::-moz-placeholder{transform:translate(4px)}:where(.mgn-input:focus).mgn-input::placeholder{transform:translate(4px)}:where(.mgn-input--error).mgn-input::-moz-placeholder{color:rgba(var(--mgn-color-error),.6)}:where(.mgn-input--error).mgn-input::placeholder{color:rgba(var(--mgn-color-error),.6)}\n";
+  var style_default2 = ':host{--mgn_input-border-radius: var(--mgn-radius);--mgn_input-box-shadow: var(--mgn-shadow-level-1-highlight);--mgn_input-box-shadow-error: var(--mgn-shadow-level-1-error);--mgn_input-color: rgb(--mgn-color-muted-active);--mgn_input-color-border: rgb(var(--mgn-color-muted));--mgn_input-color-border-highlight: rgb(var(--mgn-color-highlight));--mgn_input-color-border-error: rgb(var(--mgn-color-error));--mgn_input-color-border-success: rgb(var(--mgn-color-success));--mgn_input-color-border-warning: rgb(var(--mgn-color-warning));--mgn_input-color-background: rgb(var(--mgn-color-background-muted));--mgn_input-font-size: 14px;--mgn_input-height: 40px;--mgn_input-padding: 0 8px}:host{display:flex;flex-direction:column;width:100%}.mgn-input{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:#fff;border:2px solid var(--mgn_input-color-border);border-radius:var(--mgn_input-border-radius);box-sizing:border-box;color:var(--mgn_input-color);display:block;flex:1 1 auto;font-size:var(--mgn_input-font-size);font-weight:400;height:var(--mgn_input-height);line-height:1.53;padding:var(--mgn_input-padding)}.mgn-input:focus{outline:0}.mgn-input:focus:where(:not(.mgn-input--error)){background-color:#fff;border-color:var(--mgn_input-color-border-highlight);box-shadow:var(--mgn_input-box-shadow)}.mgn-input--readonly,.mgn-input--readonly:focus{background-color:var(--mgn_input-color-background)}.mgn-input--disabled,.mgn-input--disabled:focus{background-color:var(--mgn_input-color-background);cursor:not-allowed;opacity:.65}.mgn-input--error{background-color:rgba(var(--mgn-color-error),.1);border-color:var(--mgn_input-color-border-error);color:rgb(var(--mgn-color-error))}.mgn-input--error:focus{background-color:#fff;box-shadow:var(--mgn_input-box-shadow-error)}.mgn-input::-moz-placeholder{color:#b4bdc6;font-style:italic;-moz-transition:transform .1s;transition:transform .1s}.mgn-input::placeholder{color:#b4bdc6;font-style:italic;transition:transform .1s}:where(.mgn-input:focus).mgn-input::-moz-placeholder{transform:translate(4px)}:where(.mgn-input:focus).mgn-input::placeholder{transform:translate(4px)}:where(.mgn-input--error).mgn-input::-moz-placeholder{color:rgba(var(--mgn-color-error),.6)}:where(.mgn-input--error).mgn-input::placeholder{color:rgba(var(--mgn-color-error),.6)}.mgn-input__label{color:var(--mgn_input-color);display:none;font-size:14px;font-weight:700;margin-bottom:8px;text-transform:uppercase}.mgn-input__label--visible{display:block}.mgn-input__label--error{color:rgb(var(--mgn-color-error))}.mgn-input__details{align-items:flex-start;color:var(--mgn_input-color);display:none;font-size:14px;gap:8px;margin-top:8px}.mgn-input__details--visible{display:flex}.mgn-input__details--error{color:rgb(var(--mgn-color-error))}.mgn-input__details:before{background-color:var(--mgn_input-color-border);content:"";display:inline-flex;height:100%;width:2px}.mgn-input__details:where(.mgn-input__details--error):before{background-color:var(--mgn_input-color-border-error)}\n';
 
   // src/components/input/index.js
   var style2 = new CSSStyleSheet();
   style2.replaceSync(style_default2);
-  var _shadowRoot2, _state, _internals;
+  var _shadowRoot2, _state, _internals, _onLabelSlotChange, onLabelSlotChange_fn, _onDetailsSlotChange, onDetailsSlotChange_fn;
   var Component2 = class extends HTMLElement {
     constructor() {
       super();
+      __privateAdd(this, _onLabelSlotChange);
+      __privateAdd(this, _onDetailsSlotChange);
       __privateAdd(this, _shadowRoot2, null);
       __privateAdd(this, _state, {});
       __privateAdd(this, _internals, null);
@@ -741,18 +743,46 @@
         { "mgn-input--success": __privateGet(this, _state).type === "success" },
         { "mgn-input--warning": __privateGet(this, _state).type === "warning" }
       );
+      const labelClasses = class_names_default(
+        "mgn-input__label",
+        { "mgn-input__label--visible": __privateGet(this, _state).labelVisible },
+        { "mgn-input__label--error": __privateGet(this, _state).type === "error" }
+      );
+      const detailsClasses = class_names_default(
+        "mgn-input__details",
+        { "mgn-input__details--visible": __privateGet(this, _state).detailsVisible },
+        { "mgn-input__details--error": __privateGet(this, _state).type === "error" }
+      );
       render(__privateGet(this, _shadowRoot2), html`
+      <div class="${labelClasses}">
+        <slot name="label" onslotchange=${__privateMethod(this, _onLabelSlotChange, onLabelSlotChange_fn).bind(this)}></slot>
+      </div>
+
       <input type="text" part="input" value="${__privateGet(this, _state).value}" placeholder="${__privateGet(this, _state).placeholder}" ?disabled="${__privateGet(this, _state).disabled}" ?readonly="${__privateGet(this, _state).readonly}" class="${classes}">
+    
+      <div class="${detailsClasses}">
+        <slot name="details" onslotchange=${__privateMethod(this, _onDetailsSlotChange, onDetailsSlotChange_fn).bind(this)}></slot>
+      </div>
     `);
     }
   };
   _shadowRoot2 = new WeakMap();
   _state = new WeakMap();
   _internals = new WeakMap();
+  _onLabelSlotChange = new WeakSet();
+  onLabelSlotChange_fn = function(event2) {
+    __privateGet(this, _state).labelVisible = !!event2.target.assignedNodes().length;
+    this.render();
+  };
+  _onDetailsSlotChange = new WeakSet();
+  onDetailsSlotChange_fn = function(event2) {
+    __privateGet(this, _state).detailsVisible = !!event2.target.assignedNodes().length;
+    this.render();
+  };
   __publicField(Component2, "formAssociated", true);
 
   // src/components/button/style.css
-  var style_default3 = ":host{--mgn_button-border-radius: 4px;--mgn_button-box-shadow: var(--mgn-shadow-level-1-highlight);--mgn_button-box-shadow-muted: var(--mgn-shadow-level-1-muted);--mgn_button-color-background: rgb(var(--mgn-color-background-highlight));--mgn_button-color-background-hover: rgb(var(--mgn-color-background-highlight-hover));--mgn_button-color-background-active: rgb(var(--mgn-color-background-highlight-active));--mgn_button-color-background-muted: rgb(var(--mgn-color-background-muted));--mgn_button-color-background-muted-hover: rgb(var(--mgn-color-background-muted-hover));--mgn_button-color-background-muted-active: rgb(var(--mgn-color-background-muted-active));--mgn_button-font-size: 14px;--mgn_button-gap: 4px;--mgn_button-height: 36px;--mgn_button-padding: 0 8px}:host{display:inline-flex;vertical-align:top}:host([fluid]){display:flex;width:100%}.mgn-button{align-items:center;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:var(--mgn_button-color-background);border:0;border-radius:var(--mgn_button-border-radius);box-sizing:border-box;box-shadow:var(--mgn_button-box-shadow);color:#fff;cursor:pointer;display:inline-flex;font-family:var(--mgn-font-family, sans-serif);font-size:var(--mgn_button-font-size);gap:var(--mgn_button-gap);height:var(--mgn_button-height);justify-content:center;padding:var(--mgn_button-padding);text-align:center;text-decoration:none;transition:transform .1s;-webkit-user-select:none;-moz-user-select:none;user-select:none;white-space:nowrap}.mgn-button:hover:where(:not(.mgn-button--disabled)){background-color:var(--mgn_button-color-background-hover);transform:translateY(-1px)}.mgn-button:active:where(:not(.mgn-button--disabled)){background-color:var(--mgn_button-color-background-active);transform:translateY(0)}.mgn-button--muted{background-color:var(--mgn_button-color-background-muted);box-shadow:none;color:#8592a3}.mgn-button--muted:hover:where(:not(.mgn-button--disabled)){background-color:var(--mgn_button-color-background-muted-hover);color:#fff;box-shadow:var(--mgn_button-box-shadow-muted)}.mgn-button--muted:active:where(:not(.mgn-button--disabled)){background-color:var(--mgn_button-color-background-muted-active);transform:translateY(0)}.mgn-button--ghost{background-color:transparent;box-shadow:none;color:#566a7f}.mgn-button--ghost:hover:where(:not(.mgn-button--disabled)){background-color:#8592a333;transform:translateY(0)}.mgn-button--ghost:active:where(:not(.mgn-button--disabled)){background-color:#8592a344;transform:translateY(0)}.mgn-button--disabled{background-color:#e7e7ff;box-shadow:none;color:rgb(var(--mgn-color-highlight));cursor:not-allowed;opacity:.65}.mgn-button--disabled:where(.mgn-button--muted){background-color:#ebeef0;color:#8592a3}.mgn-button--disabled:where(.mgn-button--ghost){background-color:transparent;color:#566a7f}.mgn-button--fluid{flex:1 1 auto}\n";
+  var style_default3 = ":host{--mgn_button-border-radius: var(--mgn-radius);--mgn_button-box-shadow: var(--mgn-shadow-level-1-highlight);--mgn_button-box-shadow-muted: var(--mgn-shadow-level-1-muted);--mgn_button-color-accent: rgb(var(--mgn-color-highlight));--mgn_button-color-background: rgb(var(--mgn-color-background-highlight));--mgn_button-color-background-hover: rgb(var(--mgn-color-background-highlight-hover));--mgn_button-color-background-active: rgb(var(--mgn-color-background-highlight-active));--mgn_button-color-background-accent: rgb(var(--mgn-color-background-accent));--mgn_button-color-background-accent-hover: rgb(var(--mgn-color-background-accent-hover));--mgn_button-color-background-accent-active: rgb(var(--mgn-color-background-accent-active));--mgn_button-color-background-muted: rgb(var(--mgn-color-background-muted));--mgn_button-color-background-muted-hover: rgb(var(--mgn-color-background-muted-hover));--mgn_button-color-background-muted-active: rgb(var(--mgn-color-background-muted-active));--mgn_button-font-size: 14px;--mgn_button-font-size-small: 12px;--mgn_button-gap: 4px;--mgn_button-height: 40px;--mgn_button-height-small: 32px;--mgn_button-padding: 0 8px}:host{display:inline-flex;vertical-align:top}:host([fluid]){display:flex;width:100%}.mgn-button{align-items:center;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:var(--mgn_button-color-background);border:0;border-radius:var(--mgn_button-border-radius);box-sizing:border-box;box-shadow:var(--mgn_button-box-shadow);color:#fff;cursor:pointer;display:inline-flex;font-family:var(--mgn-font-family, sans-serif);font-size:var(--mgn_button-font-size);font-weight:700;gap:var(--mgn_button-gap);height:var(--mgn_button-height);justify-content:center;padding:var(--mgn_button-padding);text-align:center;text-decoration:none;transition:transform .1s;-webkit-user-select:none;-moz-user-select:none;user-select:none;white-space:nowrap}.mgn-button:hover:where(:not(.mgn-button--disabled)){background-color:var(--mgn_button-color-background-hover);transform:translateY(-1px)}.mgn-button:active:where(:not(.mgn-button--disabled)){background-color:var(--mgn_button-color-background-active);transform:translateY(0)}.mgn-button--accent{background-color:var(--mgn_button-color-background-accent);box-shadow:none;color:var(--mgn_button-color-accent)}.mgn-button--accent:hover:where(:not(.mgn-button--disabled)){background-color:var(--mgn_button-color-background-accent-hover);color:#fff;box-shadow:var(--mgn_button-box-shadow)}.mgn-button--accent:active:where(:not(.mgn-button--disabled)){background-color:var(--mgn_button-color-background-accent-active);transform:translateY(0)}.mgn-button--muted{background-color:var(--mgn_button-color-background-muted);box-shadow:none;color:#8592a3}.mgn-button--muted:hover:where(:not(.mgn-button--disabled)){background-color:var(--mgn_button-color-background-muted-hover);color:#fff;box-shadow:var(--mgn_button-box-shadow-muted)}.mgn-button--muted:active:where(:not(.mgn-button--disabled)){background-color:var(--mgn_button-color-background-muted-active);transform:translateY(0)}.mgn-button--ghost{background-color:transparent;box-shadow:none;color:#566a7f}.mgn-button--ghost:hover:where(:not(.mgn-button--disabled)){background-color:#8592a333;transform:translateY(0)}.mgn-button--ghost:active:where(:not(.mgn-button--disabled)){background-color:#8592a344;transform:translateY(0)}.mgn-button--disabled{background-color:#e7e7ff;box-shadow:none;color:rgb(var(--mgn-color-highlight));cursor:not-allowed;opacity:.65}.mgn-button--disabled:where(.mgn-button--muted){background-color:#ebeef0;color:#8592a3}.mgn-button--disabled:where(.mgn-button--ghost){background-color:transparent;color:#566a7f}.mgn-button--fluid{flex:1 1 auto}.mgn-button--small{font-size:var(--mgn_button-font-size-small);height:var(--mgn_button-height-small)}\n";
 
   // src/components/button/index.js
   var style3 = new CSSStyleSheet();
@@ -769,7 +799,7 @@
       this.render();
     }
     static get observedAttributes() {
-      return ["type", "variant", "disabled", "fluid"];
+      return ["type", "variant", "disabled", "fluid", "size"];
     }
     async attributeChangedCallback(name, oldValue, value) {
       if (oldValue === value) {
@@ -783,40 +813,101 @@
         this.#state.disabled = (value === "" || value !== "false") && value !== null;
       } else if (name === "fluid") {
         this.#state.fluid = (value === "" || value !== "false") && value !== null;
+      } else if (name === "size") {
+        this.#state.size = value;
       }
       this.render();
     }
     render() {
       const classes = class_names_default(
         "mgn-button",
+        { "mgn-button--accent": this.#state.variant === "accent" },
         { "mgn-button--muted": this.#state.variant === "muted" },
         { "mgn-button--ghost": this.#state.variant === "ghost" },
         { "mgn-button--disabled": this.#state.disabled },
-        { "mgn-button--fluid": this.#state.fluid }
+        { "mgn-button--fluid": this.#state.fluid },
+        { "mgn-button--small": this.#state.size === "small" }
       );
       render(this.#shadowRoot, html`
-      <button part="input" type="${this.#state.type}" ?disabled="${this.#state.disabled}" class="${classes}" onclick="${this.#onClick.bind(this)}"><slot></slot></button>
+      <button part="input" type="${this.#state.type || "button"}" ?disabled="${this.#state.disabled}" class="${classes}" onclick="${this.#onClick.bind(this)}"><slot></slot></button>
     `);
     }
     #onClick(event2) {
-      this.dispatchEvent(new MouseEvent("click"));
-      if (this.#state.type === "submit") {
-        const form = this.closest("form");
-        if (form) {
-          event2.preventDefault();
-          form.submit();
-        }
+      if (this.#state.type !== "submit") {
+        return;
       }
+      const form = this.closest("form");
+      if (!form) {
+        return;
+      }
+      event2.preventDefault();
+      form.submit();
+    }
+  };
+
+  // src/components/card/style.css
+  var style_default4 = ":host{--mgn_card-color-background: #fff;--mgn_card-color-background-highlight: rgb(var(--mgn-color-background-highlight));--mgn_card-radius: var(--mgn-radius)}.mgn-card{background:#fff;box-shadow:var(--mgn-shadow-level-1-muted);border-radius:var(--mgn_card-radius);display:flex;flex-direction:column;gap:16px;padding:16px 0}.mgn-card--highlight{background:var(--mgn_card-color-background-highlight);box-shadow:var(--mgn-shadow-level-1-highlight);color:#fff}.mgn-card__title{align-items:flex-start;display:flex;font-size:18px;font-weight:700;justify-content:space-between;padding:0 16px}.mgn-card ::slotted(mgn-card-title){flex:1 1 auto}.mgn-card ::slotted(mgn-card-content){flex:1 1 auto;padding:0 16px}.mgn-card ::slotted(mgn-card-content[expanded]){flex:1 1 auto;padding:0}.mgn-card__actions{margin-right:-8px;margin-top:-8px}.mgn-card__footer{display:flex;justify-content:flex-end;padding:0 16px}.mgn-card ::slotted(mgn-card-footer){flex:1 1 auto}\n";
+
+  // src/components/card/index.js
+  var style4 = new CSSStyleSheet();
+  style4.replaceSync(style_default4);
+  var Component4 = class extends HTMLElement {
+    #shadowRoot = null;
+    #state = {};
+    constructor() {
+      super();
+      this.#shadowRoot = this.attachShadow({ mode: "closed" });
+      this.#shadowRoot.adoptedStyleSheets = [style4];
+    }
+    connectedCallback() {
+      this.render();
+    }
+    static get observedAttributes() {
+      return ["variant"];
+    }
+    async attributeChangedCallback(name, oldValue, value) {
+      if (oldValue === value) {
+        return;
+      }
+      if (name === "variant") {
+        this.#state.variant = value;
+      }
+      this.render();
+    }
+    render() {
+      const classes = class_names_default(
+        "mgn-card",
+        { "mgn-card--highlight": this.#state.variant === "highlight" }
+      );
+      render(this.#shadowRoot, html`
+      <div class="${classes}">
+        <div class="mgn-card__title">
+          <slot name="title" onslotchange=${this.#onTitleSlotChange.bind(this)}></slot>
+          <div class="mgn-card__actions">
+            <slot name="actions"></slot>
+          </div>
+        </div>
+        <slot name="content"></slot>
+        <div class="mgn-card__footer">
+          <slot name="footer"></slot>
+        </div>
+      </div>
+    `);
+    }
+    #onTitleSlotChange(event2) {
+      this.#state.titleVisible = !!event2.target.assignedNodes().length;
+      this.render();
     }
   };
 
   // src/build.browser.js
-  var style4 = new CSSStyleSheet();
-  style4.replaceSync(main_default);
-  document.adoptedStyleSheets = [...document.adoptedStyleSheets, style4];
+  var style5 = new CSSStyleSheet();
+  style5.replaceSync(main_default);
+  document.adoptedStyleSheets = [...document.adoptedStyleSheets, style5];
   customElements.define("mgn-icon", Component);
   customElements.define("mgn-input", Component2);
   customElements.define("mgn-button", Component3);
+  customElements.define("mgn-card", Component4);
 })();
 /*! Bundled license information:
 

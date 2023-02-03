@@ -40,7 +40,7 @@ if (process.env.WORKFLOW === 'browser') {
     outfile: 'dist/mugen.browser.js',
     plugins: [watchPlugin, postCssPlugin]
   };
-  
+
   if (!!process.env.WATCH) {
     const context = await esbuild.context(buildOptions);
     await context.watch();
